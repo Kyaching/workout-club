@@ -30,7 +30,7 @@ const WorkoutInfo = () => {
           <p>Age</p>
         </div>
       </div>
-      <h2>Add a break</h2>
+      <h2>Add A Break</h2>
       <div className="measurement-container">
         <button>
           10<span>s</span>
@@ -48,6 +48,20 @@ const WorkoutInfo = () => {
           50<span>s</span>
         </button>
       </div>
+      <h3>Exercise Details</h3>
+      <div className="measurement-container">
+        <h4>Exercise Time:</h4>
+        <h4>
+          200 <span>seconds</span>
+        </h4>
+      </div>
+      <div className="measurement-container">
+        <h4>Break Time:</h4>
+        <h4>
+          15 <span>seconds</span>
+        </h4>
+      </div>
+      <button className="activity-btn">Activity Completed</button>
     </div>
   );
 };
