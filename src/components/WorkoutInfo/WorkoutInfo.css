@@ -29,3 +29,8 @@ p {
   padding: 15px 20px;
   border-radius: 10px;
 }
+.measurement-container button {
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+}

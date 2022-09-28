@@ -13,7 +13,7 @@ const WorkoutInfo = () => {
         </div>
       </div>
       <div className="measurement-container">
-        <div className="measure-info">
+        <div>
           <h2>
             75<sub>kg</sub>
           </h2>
@@ -29,6 +29,24 @@ const WorkoutInfo = () => {
           </h2>
           <p>Age</p>
         </div>
+      </div>
+      <h2>Add a break</h2>
+      <div className="measurement-container">
+        <button>
+          10<span>s</span>
+        </button>
+        <button>
+          20<span>s</span>
+        </button>
+        <button>
+          30<span>s</span>
+        </button>
+        <button>
+          40<span>s</span>
+        </button>
+        <button>
+          50<span>s</span>
+        </button>
       </div>
     </div>
   );
