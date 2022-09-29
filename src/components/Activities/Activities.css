@@ -25,4 +25,9 @@
     grid-template-columns: 1fr;
     margin: 10px;
   }
+  .todays-select {
+    position: initial;
+    text-align: center;
+    padding: 0;
+  }
 }
