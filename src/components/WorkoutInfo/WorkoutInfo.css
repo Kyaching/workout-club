@@ -1,18 +1,8 @@
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-  padding: 0;
-}
 .workout-info-container {
   background-color: #fff;
   padding: 10px 20px;
-  position: absolute;
-  right: 0;
+  position: sticky;
   top: 0;
-  height: 900px;
-  width: 300px;
 }
 .my-info {
   display: flex;
@@ -54,7 +44,7 @@ p {
   .workout-info-container {
     position: initial;
     height: 100%;
-    width: 84%;
+    width: 88%;
     margin: 10px;
     border-radius: 10px;
   }
