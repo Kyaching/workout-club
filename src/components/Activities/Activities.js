@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import Exercises from "../Exercises/Exercises";
 import WorkoutInfo from "../WorkoutInfo/WorkoutInfo";
