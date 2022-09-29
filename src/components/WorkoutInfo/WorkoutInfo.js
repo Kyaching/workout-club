@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./WorkoutInfo.css";
 import photo from "../../images/pic.jpg";
 import { addToDB, getFromDb } from "../../Utilities/fakeDB";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const WorkoutInfo = ({ workout }) => {
   const [time, setTime] = useState([0]);
@@ -15,8 +17,30 @@ const WorkoutInfo = ({ workout }) => {
     const getData = getFromDb();
     setTime(getData);
   }, []);
+
+  const notify = () =>
+    toast.success(" Wow! You completed your daily activities successfully.", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   return (
     <div className="workout-info-container">
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="my-info">
         <img src={photo} alt="" />
         <div>
@@ -73,7 +97,9 @@ const WorkoutInfo = ({ workout }) => {
           {time ? time : "0"} <span>seconds</span>
         </h4>
       </div>
-      <button className="activity-btn">Activity Completed</button>
+      <button onClick={notify} className="activity-btn">
+        Activity Completed
+      </button>
     </div>
   );
 };
