@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./WorkoutInfo.css";
 import photo from "../../images/pic.jpg";
+import { addToDB, getFromDb } from "../../Utilities/fakeDB";
 
-const WorkoutInfo = () => {
+const WorkoutInfo = ({ workout }) => {
+  const [time, setTime] = useState([0]);
+
+  const handleBreak = (e) => {
+    const times = e.target.value;
+    setTime(times);
+    addToDB(times);
+  };
+  useEffect(() => {
+    const getData = getFromDb();
+    setTime(getData);
+  }, []);
   return (
     <div className="workout-info-container">
       <div className="my-info">
@@ -32,33 +44,33 @@ const WorkoutInfo = () => {
       </div>
       <h2>Add A Break</h2>
       <div className="measurement-container">
-        <button>
-          10<span>s</span>
+        <button onClick={handleBreak} value="10">
+          10s
         </button>
-        <button>
-          20<span>s</span>
+        <button onClick={handleBreak} value="20">
+          20s
         </button>
-        <button>
-          30<span>s</span>
+        <button onClick={handleBreak} value="30">
+          30s
         </button>
-        <button>
-          40<span>s</span>
+        <button onClick={handleBreak} value="40">
+          40s
         </button>
-        <button>
-          50<span>s</span>
+        <button onClick={handleBreak} value="50">
+          50s
         </button>
       </div>
       <h3>Exercise Details</h3>
       <div className="measurement-container">
         <h4>Exercise Time:</h4>
         <h4>
-          200 <span>seconds</span>
+          <span>seconds</span>
         </h4>
       </div>
       <div className="measurement-container">
         <h4>Break Time:</h4>
         <h4>
-          15 <span>seconds</span>
+          {time ? time : "0"} <span>seconds</span>
         </h4>
       </div>
       <button className="activity-btn">Activity Completed</button>
