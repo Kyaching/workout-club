@@ -6,8 +6,12 @@ import "./Activities.css";
 const Activities = () => {
   const [workouts, setWorkouts] = useState([]);
   const [workout, setWorkout] = useState([]);
+  console.log(workout);
 
-  const handleAddToList = (workout) => {};
+  const handleAddToList = (data) => {
+    let newData = [...workout, data];
+    setWorkout(newData);
+  };
 
   useEffect(() => {
     fetch("workout.json")

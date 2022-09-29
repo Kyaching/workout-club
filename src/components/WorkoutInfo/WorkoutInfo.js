@@ -6,6 +6,11 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const WorkoutInfo = ({ workout }) => {
+  const totalTime = workout.reduce(
+    (prev, currentTime) => prev + currentTime.time,
+    0
+  );
+  console.log(totalTime);
   const [time, setTime] = useState([0]);
 
   const handleBreak = (e) => {
@@ -87,15 +92,11 @@ const WorkoutInfo = ({ workout }) => {
       <h3>Exercise Details</h3>
       <div className="measurement-container">
         <h4>Exercise Time:</h4>
-        <h4>
-          <span>seconds</span>
-        </h4>
+        <h4>{totalTime} seconds</h4>
       </div>
       <div className="measurement-container">
         <h4>Break Time:</h4>
-        <h4>
-          {time ? time : "0"} <span>seconds</span>
-        </h4>
+        <h4>{time ? time : "0"} seconds</h4>
       </div>
       <button onClick={notify} className="activity-btn">
         Activity Completed
