@@ -23,11 +23,39 @@
   }
   .workout-container {
     grid-template-columns: 1fr;
-    margin: 10px;
+    margin: 20px;
   }
   .todays-select {
     position: initial;
     text-align: center;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 786px) {
+  .activities-container {
+    grid-template-columns: 1fr;
+  }
+  .workout-container {
+    grid-template-columns: 1fr;
+    margin: 20px;
+    margin-top: 60px;
+  }
+  .todays-select {
+    margin: 20px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 787px) and (max-width: 992px) {
+  .activities-container {
+    grid-template-columns: 2fr 1fr;
+  }
+  .workout-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px;
+    margin-top: 60px;
+  }
+  .todays-select {
+    margin: 20px;
     padding: 0;
   }
 }
