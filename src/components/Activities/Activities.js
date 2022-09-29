@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import Exercises from "../Exercises/Exercises";
 import WorkoutInfo from "../WorkoutInfo/WorkoutInfo";
@@ -21,8 +22,6 @@ const Activities = () => {
 
   return (
     <div>
-      <h1>Workout Activity Club</h1>
-      <h4>Select Today's Exercise</h4>
       <div className="activity-container">
         <div className="workout-container">
           {workouts.map((workout) => (

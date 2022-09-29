@@ -8,3 +8,13 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
+
+@media screen and (max-width: 576px) {
+  .activity-container {
+    grid-template-columns: 1fr;
+  }
+  .workout-container {
+    grid-template-columns: 1fr;
+    margin: 10px;
+  }
+}
