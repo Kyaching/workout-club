@@ -1,3 +1,10 @@
 .App {
-  background-color: rgba(128, 128, 128, 0.603);
+  background-color: #6b7b8c;
+}
+footer p {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  font-weight: 600;
 }

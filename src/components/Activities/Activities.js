@@ -7,7 +7,6 @@ import "./Activities.css";
 const Activities = () => {
   const [workouts, setWorkouts] = useState([]);
   const [workout, setWorkout] = useState([]);
-  console.log(workout);
 
   const handleAddToList = (data) => {
     let newData = [...workout, data];
@@ -21,7 +20,8 @@ const Activities = () => {
   }, []);
 
   return (
-    <div>
+    <div className="activities-container">
+      <h3 className="todays-select">Select today's Exercise</h3>
       <div className="activity-container">
         <div className="workout-container">
           {workouts.map((workout) => (

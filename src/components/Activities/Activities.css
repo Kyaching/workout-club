@@ -1,9 +1,17 @@
+.activities-container {
+  position: relative;
+}
+.todays-select {
+  padding-left: 70px;
+  position: absolute;
+  color: white;
+}
 .activity-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
 .workout-container {
-  margin: 60px;
+  margin: 70px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;

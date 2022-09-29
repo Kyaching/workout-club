@@ -4,6 +4,7 @@ import "./Questions.css";
 const Questions = () => {
   return (
     <div className="question-container">
+      <h1>Questions</h1>
       <div className="questions">
         <h2>
           <strong>Q.1.</strong> How does react works?

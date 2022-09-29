@@ -1,8 +1,12 @@
 .header-container {
-  background-color: aqua;
+  background-color: #3b4d61;
   text-align: center;
+  color: white;
 }
 .header-container h1 {
   margin: 0;
   padding: 20px;
+}
+.icon {
+  padding-right: 10px;
 }

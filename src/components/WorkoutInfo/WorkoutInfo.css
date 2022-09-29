@@ -14,20 +14,40 @@
   height: 50px;
   border-radius: 50%;
 }
+.name-container h3 {
+  margin: 0;
+}
+.name-container p {
+  margin: 0;
+}
 .measurement-container {
   margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #8080809a;
+  background-color: #6b7b8c;
   padding: 15px 20px;
   border-radius: 10px;
 }
+.measurement-container h4 {
+  margin: 0;
+}
+.measures h2 {
+  margin: 0;
+}
+.measures p {
+  margin: 0;
+}
 .measurement-container button {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: none;
-  padding: 10px;
   cursor: pointer;
+}
+.measurement-container button:hover {
+  background-color: blue;
+  color: white;
 }
 .activity-btn {
   margin-top: 30px;

@@ -9,6 +9,9 @@ function App() {
       <Header></Header>
       <Activities></Activities>
       <Questions></Questions>
+      <footer>
+        <p>Copyright @2022</p>
+      </footer>
     </div>
   );
 }

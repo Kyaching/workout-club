@@ -10,7 +10,6 @@ const WorkoutInfo = ({ workout }) => {
     (prev, currentTime) => prev + currentTime.time,
     0
   );
-  console.log(totalTime);
   const [time, setTime] = useState([0]);
 
   const handleBreak = (e) => {
@@ -48,23 +47,23 @@ const WorkoutInfo = ({ workout }) => {
       />
       <div className="my-info">
         <img src={photo} alt="" />
-        <div>
+        <div className="name-container">
           <h3>Mark</h3>
           <p>Sydney, Australia</p>
         </div>
       </div>
       <div className="measurement-container">
-        <div>
+        <div className="measures">
           <h2>
             75<sub>kg</sub>
           </h2>
           <p>Weight</p>
         </div>
-        <div>
+        <div className="measures">
           <h2>5.5</h2>
           <p>Height</p>
         </div>
-        <div>
+        <div className="measures">
           <h2>
             25<sub>yrs</sub>
           </h2>
